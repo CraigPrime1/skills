@@ -1,0 +1,3 @@
+interface:
+  display_name: "Onboarding Audit"
+  short_description: "Map an unfamiliar codebase, rank its problems"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "UI Components"
+  short_description: "Build reusable, accessible UI components"

@@ -196,6 +196,14 @@ Skills I use daily for code work.
 - **[codebase-design](./skills/engineering/codebase-design/SKILL.md)** — Shared discipline and vocabulary for designing deep modules: a lot of behaviour behind a small interface, placed at a clean seam, testable through that interface.
 - **[code-review](./skills/engineering/code-review/SKILL.md)** — Two-axis review of the diff since a fixed point: **Standards** (does it follow the repo's coding standards, plus a Fowler smell baseline?) and **Spec** (does it faithfully implement the originating issue/PRD?), run as parallel sub-agents so neither pollutes the other.
 - **[resolving-merge-conflicts](./skills/engineering/resolving-merge-conflicts/SKILL.md)** — Work through an in-progress git merge or rebase conflict hunk by hunk, resolving by intent traced to each side's primary source, then finish the operation — never `--abort`.
+- **[system-design](./skills/engineering/system-design/SKILL.md)** — Design a scalable system — data model, API contract, data flow, caching, failure modes — then build the minimal version of it that could run in production.
+- **[full-stack-mvp](./skills/engineering/full-stack-mvp/SKILL.md)** — Build a complete application from scratch: one core loop, built production-ready, in vertical slices — schema, API endpoints, UI architecture, and running code.
+- **[ui-components](./skills/engineering/ui-components/SKILL.md)** — Build reusable, accessible, production-ready UI components: props contract first, every state designed, accessibility as a floor rather than a phase.
+- **[clean-architecture](./skills/engineering/clean-architecture/SKILL.md)** — Restructure tangled code into separated concerns and a dependency rule that points inward — behaviour proven unchanged, one verified step at a time.
+- **[optimizing-performance](./skills/engineering/optimizing-performance/SKILL.md)** — Profile-first work on speed, memory and scale: baseline, find the dominant cost, change one thing at a time, keep only what the numbers justify.
+- **[production-debugging](./skills/engineering/production-debugging/SKILL.md)** — Investigate a failure hitting real users: mitigate first, harvest the evidence before it rotates away, instrument production safely, then fix and write the post-incident note.
+- **[onboarding-audit](./skills/engineering/onboarding-audit/SKILL.md)** — Get oriented in an unfamiliar codebase by tracing real paths end to end, then report structural, duplication, performance and maintainability findings ranked by risk × churn.
+- **[four-hats](./skills/engineering/four-hats/SKILL.md)** — Run one piece of work through Architect → Engineer → Reviewer → Optimizer, with the review and optimisation hats as context-isolated sub-agents.
 
 ### Productivity
 
