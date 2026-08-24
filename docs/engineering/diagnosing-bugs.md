@@ -20,7 +20,7 @@ It refuses to hypothesise before you have a **tight feedback loop** — one runn
 
 Type `/diagnosing-bugs`, or the agent reaches for it automatically when a task fits — it fires on "diagnose" / "debug this", or when you report something broken, throwing, failing, or slow.
 
-Reach for it on the hard ones: the bug that resists a first glance, the intermittent flake, the regression that crept in between two known-good states. For a quick throwaway to sanity-check a design question rather than chase a defect, use [prototype](https://aihero.dev/skills-prototype) instead.
+Reach for it on the hard ones: the bug that resists a first glance, the intermittent flake, the regression that crept in between two known-good states. For a failure happening in a deployed environment that you can't reproduce locally, use [production-debugging](https://aihero.dev/skills-production-debugging) first — it hands back here the moment the bug reproduces. For a quick throwaway to sanity-check a design question rather than chase a defect, use [prototype](https://aihero.dev/skills-prototype) instead.
 
 ## The tight loop is the skill
 

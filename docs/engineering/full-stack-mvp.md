@@ -14,17 +14,17 @@ npx skills update full-stack-mvp
 
 `full-stack-mvp` builds a whole application from scratch the way a senior full-stack engineer ships a startup's first version: architecture, file structure, database schema, API endpoints, UI architecture, and complete running code.
 
-Its defining constraint is **one core loop, built properly** — MVP is a limit on *scope*, never on *quality*. The failure it exists to prevent is the demo with six half-features, no auth and no migrations that has to be thrown away the week it gets users.
+MVP is a limit on *scope*, never on *quality*: one core loop, built properly. The failure it exists to prevent is the demo with six half-features, no auth and no migrations that has to be thrown away the week it gets users.
 
 ## When to reach for it
 
 Type `/full-stack-mvp`, or the agent reaches for it automatically when a task fits — it fires when you want a new app or product built end to end, a greenfield project, or a startup MVP that has to be real rather than a demo.
 
-Reach for it when you're building the whole thing. For the design of one system or service that has to hold up under load, use [system-design](https://aihero.dev/skills-system-design) — this skill borrows its numbers whenever the backend needs real scale thinking.
+Reach for it when you're building the whole thing, and when you can name the core loop in one sentence — if you can't yet, run [grill-with-docs](https://aihero.dev/skills-grill-with-docs) first, because building the wrong loop beautifully is the most expensive outcome available. For the design of one backend system or service rather than a whole app, use [system-design](https://aihero.dev/skills-system-design); this skill borrows its numbers whenever the backend needs real scale thinking.
 
 ## Prerequisites
 
-A core loop you can name in one sentence. If the ask isn't that concrete yet, the skill sends you to [grill-with-docs](https://aihero.dev/skills-grill-with-docs) first — building the wrong loop beautifully is the most expensive outcome available.
+A directory it can scaffold a whole application into. This skill writes a working tree — migrations, seed data, `.env.example`, CI config, README — so point it at an empty repo, not one that already has an app in it.
 
 ## Scope is the only thing that's minimal
 
@@ -43,4 +43,4 @@ It builds in **vertical slices**, never layer by layer: each slice runs schema �
 
 ## Where it fits
 
-`full-stack-mvp` is a greenfield starting point that pulls other skills in as it goes — [system-design](https://aihero.dev/skills-system-design) for scale decisions, [ui-components](https://aihero.dev/skills-ui-components) for the shared UI pieces, [tdd](https://aihero.dev/skills-tdd) for domain rules, and [code-review](https://aihero.dev/skills-code-review) to close out. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`full-stack-mvp` is a reach-for-it-anytime standalone that starts a greenfield build. It pulls in [system-design](https://aihero.dev/skills-system-design) when the backend needs scale decisions, and [ui-components](https://aihero.dev/skills-ui-components) for the shared UI pieces. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.

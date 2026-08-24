@@ -1,6 +1,6 @@
 ---
 name: optimizing-performance
-description: Make code faster, leaner, or more scalable — measurement first. Use when the user says something is slow or heavy, asks about performance, memory usage, scalability, bottlenecks, unnecessary re-renders, or optimisation.
+description: Make code faster, leaner, or more scalable — measurement first. Use when the user says something is slow, heavy, laggy or takes forever, or mentions performance, memory usage or a memory leak, scalability, bottlenecks, N+1 queries, bundle size, or unnecessary re-renders — for code that has always been too slow, not code that used to be fast (that's a regression: use diagnosing-bugs).
 ---
 
 # Optimizing Performance
@@ -31,9 +31,9 @@ Build a harness that produces the metric on demand, from a **realistic** workloa
 
 ## Phase 3 — Profile to find the dominant cost
 
-**Profile; don't read code and guess.** Use the real tool: sampling profiler, flame graph, `EXPLAIN ANALYZE`, browser performance panel, allocation/heap snapshot, `time`/`perf`.
+**Profile; don't read code and guess.** Use the real tool: sampling profiler, flame graph, `EXPLAIN` (`EXPLAIN ANALYZE` **executes the statement** — read queries only, or wrap writes in `BEGIN … ROLLBACK`, and never against production without the user's go-ahead), browser performance panel, allocation/heap snapshot, `time`/`perf`.
 
-Rank costs by share of total. Amdahl's law is the whole strategy: **the only change worth making is to the dominant cost.** Making a 3% path twice as fast buys 1.5%.
+Rank costs by share of total, then **attack the largest cost you can actually change.** Making a 3% path twice as fast buys 1.5%. Two caveats that decide real cases: when the dominant cost is a dependency you don't control (a third-party API, a mandated crypto step), say so explicitly and move to the largest cost you do control; and check whether several mid-sized costs share one fix (a single batching change) before dismissing them individually.
 
 Where profiles lie or aren't available, bracket with timers around candidate regions and bisect by measurement — still numbers, not intuition.
 
@@ -41,12 +41,12 @@ Where profiles lie or aren't available, bracket with timers around candidate reg
 
 - **Algorithmic complexity** — the nested loop over a growing collection, the O(n²) that was fine at launch. Biggest wins live here.
 - **Round trips** — N+1 queries, per-item API calls, chatty I/O in a loop. Batch, join, or prefetch.
-- **Missing or unused indexes** — read the query plan; a sequential scan on a large table is the answer surprisingly often.
+- **Index problems** — read the query plan. A sequential scan is only a defect when the query is *selective*: check estimated-vs-actual rows first (a wide gap means stale statistics, not a missing index), and check the predicate is sargable (no function or cast wrapped around the column, no leading-wildcard `LIKE`). Every index is a permanent write cost — name the query it serves.
 - **Doing work that could be done once** — recomputing inside a loop, re-parsing config, rebuilding a lookup table per call.
 - **Doing work nobody asked for** — over-fetching columns/rows, eager loading, shipping data the client discards.
 - **Serialisation and copying** — JSON encode/decode on hot paths, defensive deep clones, large payloads crossing a boundary.
 - **Allocation churn / retained memory** — per-iteration allocation, unbounded caches, leaked listeners and timers, closures holding large objects.
-- **Unnecessary rendering (frontend)** — a re-render is a symptom; find the cause. New object/array/function identity in props each render, context holding a value that changes on every keystroke, state living higher than it needs to, list keys by index. Fix the cause; reach for memoisation only when a profile shows the render itself is expensive.
+- **Unnecessary rendering (frontend)** — a re-render is a symptom; find the cause. New object/array/function identity in props **where it defeats an existing `React.memo` boundary or an effect's dependency array** — identity churn under an unmemoised parent costs nothing, so memoising there is pure overhead; context holding a value that changes on every keystroke; state living higher than it needs to. Reach for memoisation only when a profile shows the render itself is expensive. (Index keys are a correctness bug, not a perf one — fix them separately.)
 - **Blocking the main thread / event loop** — synchronous heavy work, large parses, unbatched layout thrashing. Chunk it, defer it, or move it off-thread.
 - **Missing cache at the right layer** — cheapest win when the data tolerates staleness; the invalidation strategy is part of the change, not an afterthought.
 

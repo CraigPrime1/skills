@@ -14,13 +14,17 @@ npx skills update production-debugging
 
 `production-debugging` investigates a failure happening to real users in a live environment — working from logs, traces, metrics and the deploy timeline rather than a debugger you can't attach.
 
-Two constraints define it. **Stop the bleeding before you satisfy your curiosity**: mitigation comes before root cause, because a rollback or a flipped flag converts an incident into a bug you can debug calmly. And **production is not a REPL** — you never deploy speculative changes to see what happens.
+It stops the bleeding before it satisfies its curiosity: mitigation comes before root cause, because a flipped flag or a config revert converts an incident into a bug you can debug calmly.
 
 ## When to reach for it
 
 Type `/production-debugging`, or the agent reaches for it automatically when a task fits — it fires on an incident, an error affecting real users, a crash, 500 or timeout in a live environment, or when you hand it an error-tracker report to work from.
 
 Reach for it while the failure is only reproducible in production. The moment you can reproduce it locally, it hands off to [diagnosing-bugs](https://aihero.dev/skills-diagnosing-bugs), which owns the tight-feedback-loop discipline from there.
+
+## Prerequisites
+
+Access to the evidence, and the authority to act on it. The skill's first two phases assume an error tracker, log search, traces and metrics, plus the deploy and feature-flag timeline — and Phase 0 assumes someone can flip a flag or revert a config. You will usually not have these yourself: the skill tells you to ask for each by name and to state plainly which ones you didn't get, rather than inferring a cohort you never saw.
 
 ## Evidence first, because evidence expires
 

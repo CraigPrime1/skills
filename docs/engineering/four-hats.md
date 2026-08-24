@@ -28,7 +28,14 @@ Each hat produces something concrete: a design brief with a rejected alternative
 
 The Reviewer can reject — the work goes back to the Engineer with findings attached, capped at two return trips. A third red round means the design is wrong, so it goes back to the Architect rather than getting patched again. The Optimizer inherits the same honesty rule from [optimizing-performance](https://aihero.dev/skills-optimizing-performance): it may only keep what it can measure, and "measured, nothing to gain" is a normal result.
 
-The anti-theatre rule underneath all of it: **disagreement is the product.** Four hats that agree immediately mean the separation failed, and the doubting hat gets re-run with a sharper brief.
+Disagreement is the product — but not manufactured disagreement: a Reviewer that reports nothing gets sent back **once** for an account of what it actually checked, and a second empty pass is a valid result rather than a cue to invent nits.
+
+## It's working if
+
+- Each hat is announced by name and leaves its artifact — brief, build note, findings, numbers.
+- The design brief names a rejected alternative, and the acceptance criteria read as checks.
+- The Reviewer's findings surprise you. If all four hats agree immediately, the separation failed.
+- Where sub-agents can't be spawned, the output says so and labels the review "not context-isolated" instead of pretending.
 
 ## Where it fits
 

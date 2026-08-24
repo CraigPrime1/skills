@@ -13,4 +13,4 @@ Add eight model-invoked engineering skills covering the senior-engineer work the
 - **`onboarding-audit`** — first contact with an unfamiliar codebase: trace a real read and write path end to end before judging anything, then report findings ranked by risk × churn, with evidence and a consequence each.
 - **`four-hats`** — run one nontrivial change through Architect → Engineer → Reviewer → Optimizer, with the Reviewer and Optimizer as context-isolated sub-agents. The separation is the mechanism; disagreement is the product.
 
-`ask-matt` gains two on-ramps (unfamiliar codebase, nothing exists yet), a production branch on "something's broken", two more codebase-health entries, and two standalones — so the router still maps the whole set.
+`ask-matt` gains an unfamiliar-codebase on-ramp, a "starting from nothing" section for the two build skills (they don't merge onto the main flow, so they aren't on-ramps), a production branch on "something's broken", two more codebase-health entries, and two standalones — plus the `/resolving-merge-conflicts` entry it had been missing, so the router now maps the whole promoted set.
