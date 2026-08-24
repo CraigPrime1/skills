@@ -1,0 +1,3 @@
+interface:
+  display_name: "Production Debugging"
+  short_description: "Investigate live incidents from real evidence"
