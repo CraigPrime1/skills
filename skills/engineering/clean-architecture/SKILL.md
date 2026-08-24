@@ -1,11 +1,11 @@
 ---
 name: clean-architecture
-description: Restructure existing code into a clean architecture — separate concerns, increase modularity, reduce coupling — while keeping behaviour identical. Use when the user asks to refactor into layers or folders, separate concerns, decouple modules, untangle a file that has grown too big, or reorganise a project's structure.
+description: Restructure an existing multi-file module or project into a clean architecture — separate concerns, increase modularity, reduce coupling — while keeping behaviour identical. Use when the user asks to refactor into layers or folders, separate concerns, split up a monolith or a god object, untangle spaghetti or a file that has grown too big, or reorganise a project's structure.
 ---
 
 # Clean Architecture
 
-Convert working-but-tangled code into a structure with separated concerns, real module boundaries, and fewer edges between things. **Behaviour remains unchanged — structure is improved.**
+Convert working-but-tangled code into a structure with separated concerns, real seams between modules, and fewer edges between things. **Behaviour remains unchanged — structure is improved.**
 
 That last sentence is the contract, and it has teeth: **you must be able to prove behaviour didn't change, before you move a single file.** A restructure you can't verify is a rewrite with extra confidence.
 
@@ -40,7 +40,7 @@ For each, note where it currently lives. The overlaps you find — "the HTTP han
 
 One rule, and it's what makes the structure *clean* rather than merely tidy: **dependencies point inward, toward the domain.** Domain code imports nothing from infrastructure or presentation. Outer layers depend on inner ones through interfaces defined by the inner layer; concrete adapters are injected at the edge.
 
-Propose the target structure explicitly — folders, what lives in each, which direction imports flow — and show it to the user before moving anything. Include:
+Propose the target structure explicitly — folders, what lives in each, which direction imports flow — and show it to the user before moving anything. Don't block on it: if the user is AFK, state the structure you're proceeding on, flag it unconfirmed, and continue. Include:
 
 - the **seam** for each concern (where the interface lives), and
 - the one or two places you're deliberately *not* splitting, because the split would cost more than the coupling.

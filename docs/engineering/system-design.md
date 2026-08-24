@@ -37,4 +37,4 @@ Its default architecture is one deployable service and one database, and every a
 
 ## Where it fits
 
-`system-design` is a reach-for-it-anytime standalone that starts where an idea has become concrete — often straight out of [grill-with-docs](https://aihero.dev/skills-grill-with-docs), and often handing its slice's tickets to [to-tickets](https://aihero.dev/skills-to-tickets) and [implement](https://aihero.dev/skills-implement). Its scale numbers are what [full-stack-mvp](https://aihero.dev/skills-full-stack-mvp) borrows when an MVP's backend needs to hold up. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`system-design` is a reach-for-it-anytime standalone that starts where an idea has become concrete. Its only stated handoff is to [full-stack-mvp](https://aihero.dev/skills-full-stack-mvp), which takes over where its build phase begins and adds the UI and production floor; that skill borrows this one's numbers work in return, whenever an MVP's backend has to hold up. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.

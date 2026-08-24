@@ -14,7 +14,7 @@ npx skills update onboarding-audit
 
 `onboarding-audit` orients you in a large, unfamiliar codebase — how it's built, run and wired — and then reports its structural problems, duplication, performance bottlenecks and maintainability risks as a ranked list with evidence.
 
-It won't judge before it understands: **trace one real request end to end before criticising anything.** Folder names describe the codebase somebody intended; the call path describes the one that exists. Nothing in the working tree changes — functionality remains unchanged, quality is enhanced by what happens next.
+It won't judge before it understands: **trace a real read path and a real write path end to end before criticising anything.** Folder names describe the codebase somebody intended; the call path describes the one that exists. Nothing in the working tree changes — the skill produces understanding and a ranked plan, and the fixes are separate work.
 
 ## When to reach for it
 
@@ -37,4 +37,4 @@ Findings come in four buckets — structural, duplication, performance, maintain
 
 ## Where it fits
 
-`onboarding-audit` is the first-contact survey: it hands restructures to [clean-architecture](https://aihero.dev/skills-clean-architecture), suspected slowness to [optimizing-performance](https://aihero.dev/skills-optimizing-performance), module-shape problems to [codebase-design](https://aihero.dev/skills-codebase-design), and ongoing upkeep to [improve-codebase-architecture](https://aihero.dev/skills-improve-codebase-architecture). When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`onboarding-audit` is a reach-for-it-anytime standalone — the first-contact survey. It hands restructures to [clean-architecture](https://aihero.dev/skills-clean-architecture), because a tangle it finds is that skill's whole job, and suspected slowness to [optimizing-performance](https://aihero.dev/skills-optimizing-performance), which will insist on measuring what the audit could only suspect. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.

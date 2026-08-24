@@ -14,7 +14,7 @@ npx skills update optimizing-performance
 
 `optimizing-performance` finds the real bottleneck in slow, heavy, or unscalable code, fixes it, and proves the fix with numbers — speed, memory and scale all run through the same loop.
 
-Its rule is absolute: **no measurement, no optimisation.** Every change is justified by a before-and-after number, and any change that can't produce one gets reverted. Guessing at bottlenecks is how readable code turns into fast-looking slow code.
+It optimises nothing it hasn't measured: every change is justified by a before-and-after number, and any change that can't produce one gets reverted. Guessing at bottlenecks is how readable code turns into fast-looking slow code.
 
 ## When to reach for it
 

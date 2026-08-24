@@ -1,11 +1,13 @@
 ---
 name: system-design
-description: Design a scalable system and then build its minimal production version. Use when the user asks to design a system, service, backend or architecture, or asks about data flow, API design, database schema, caching strategy, or how something will handle scale.
+description: Design a scalable backend system or service — no frontend — and then build its minimal production version. Use when the user asks to design or build a new system, service, backend or architecture: its data flow, API contract, database schema, caching strategy, queues, sharding, multi-tenancy, or how it will handle scale.
 ---
 
 # System Design
 
 Design the system, then build the **smallest version of that design that could run in production**. Two halves, both required: a design with no running slice is a document, and a slice with no design is a prototype.
+
+**Size the ask first.** If the user asked a scoped question — which cache, which schema, how to paginate, should this be two services — answer it from the relevant phase and stop. Run all seven phases only when the ask is a whole system or service.
 
 The defining constraint: **numbers before boxes.** Every component, every split, every cache in the design must trace back to a number from Phase 1. Architecture diagrams drawn before the load is known are decoration, and they are how teams end up operating six services for a workload one would carry.
 
@@ -64,10 +66,10 @@ For each cache, specify all five or don't add it:
 - **Layer** — client, CDN, application memory, shared cache (Redis), database/materialised view.
 - **Key** — including tenant and version, so it can't collide or serve stale-shaped data across deploys.
 - **TTL** and what staleness that means for the user.
-- **Invalidation** — the event that clears it. *This is the design;* the cache itself is trivial. If invalidation can't be stated in one sentence, use a short TTL instead.
+- **Invalidation** — the event that clears it, *or* an immutable key (content hash, version suffix) that makes invalidation unnecessary — in which case cache for a year. *This is the design;* the cache itself is trivial. If the data is mutable and you can't state the invalidating event in one sentence, use a short TTL instead.
 - **Miss behaviour** — including the stampede on a cold or evicted key (single-flight, jitter, stale-while-revalidate).
 
-Cache only what a Phase 3 measurement or Phase 1 number says needs it.
+Cache only what a Phase 2 access-pattern frequency or a Phase 1 number says needs it. If neither justifies it, don't — measure once the Phase 7 slice runs (`/optimizing-performance`).
 
 ## Phase 6 — Failure modes
 
@@ -80,7 +82,7 @@ Name the observability you'll need to tell any of this is happening: the handful
 Build one **vertical slice** of the design — the core write path and its read path — for real, not as scaffolding:
 
 - Real schema with migrations, real API contract, real authorisation on the path, real error handling, structured logging, config from the environment.
-- Tests at the seams the design named.
+- Tests at the seams the design named — name those seams to the user and confirm them before writing tests, per `/tdd`.
 - Deployable and runnable with one documented command.
 
 Stub what the design calls for but this slice doesn't need — behind the interface the design defined, so filling it in is a swap, not a rewrite. Then list, in writing, **what the design specifies that the minimal version defers**, and the number that would trigger building it.

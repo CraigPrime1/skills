@@ -20,7 +20,7 @@ It writes the **contract before the markup**. The props a component exposes are 
 
 Type `/ui-components`, or the agent reaches for it automatically when a task fits — it fires when you ask for a component, a design-system piece, a form, modal, table or dropdown, or when you want existing UI made reusable, responsive, or accessible.
 
-Reach for it whenever UI is going to be used more than once, or by more than one person. For a throwaway you're building to *see* what a UI should look like before committing to one, use [prototype](https://aihero.dev/skills-prototype) instead — that code is meant to be deleted, this code is meant to be maintained.
+Reach for it whenever UI is going to be used more than once, or by more than one person. Asked to fix an *existing* component rather than build a new one, it enters at the state matrix and the accessibility floor and leaves the props contract alone. For a throwaway you're building to *see* what a UI should look like — several variations to choose between — use [prototype](https://aihero.dev/skills-prototype) instead: that code is meant to be deleted, this code is meant to be maintained.
 
 ## The state matrix is the work
 

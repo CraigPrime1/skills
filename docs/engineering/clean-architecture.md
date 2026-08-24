@@ -14,7 +14,7 @@ npx skills update clean-architecture
 
 `clean-architecture` restructures existing code into separated concerns and real module boundaries — behaviour identical, structure improved — and writes the architecture description that makes the new tree navigable.
 
-Its contract has teeth: **you must be able to prove behaviour didn't change before you move a single file.** A restructure you can't verify is a rewrite with extra confidence, so the skill won't start until an existing suite, characterisation tests, or a golden-output harness is green.
+It won't move a single file until behaviour is pinned by something green — an existing suite, characterisation tests, or a golden-output harness — and that proof re-runs after every step. A restructure you can't verify is a rewrite with extra confidence.
 
 ## When to reach for it
 
@@ -24,7 +24,7 @@ Reach for it when the code works and the *shape* is the problem. To find out whi
 
 ## Prerequisites
 
-A way to prove behaviour is unchanged. If the code has no tests and no golden-output harness is achievable, the skill says so and stops rather than restructuring blind — adding characterisation tests first becomes the work.
+A way to prove behaviour is unchanged. If the code has no tests and no golden-output harness is achievable, the skill says so and stops rather than restructuring blind — adding characterisation tests first becomes the work. It also writes into the repo: an architecture description, and an ADR where the restructure made a hard-to-reverse choice.
 
 ## The dependency rule, moved in verified steps
 
@@ -43,4 +43,4 @@ It also right-sizes: a 400-line CLI doesn't need six layers, and layers you can'
 
 ## Where it fits
 
-`clean-architecture` is periodic maintenance you reach for when a tangle is blocking work. [onboarding-audit](https://aihero.dev/skills-onboarding-audit) and [improve-codebase-architecture](https://aihero.dev/skills-improve-codebase-architecture) both hand restructures to it, and it speaks [codebase-design](https://aihero.dev/skills-codebase-design)'s deep-module vocabulary while doing them. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`clean-architecture` is periodic maintenance you reach for when a tangle is blocking work. [onboarding-audit](https://aihero.dev/skills-onboarding-audit) hands its restructure findings straight to it, and it speaks [codebase-design](https://aihero.dev/skills-codebase-design)'s deep-module vocabulary while doing them. When you're unsure which skill fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.

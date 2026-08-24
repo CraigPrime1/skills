@@ -45,11 +45,18 @@ A starting situation that generates work, then merges onto the main flow.
 
 - **Dropped into a codebase you've never seen** → **`/onboarding-audit`**. It traces one real read path and one real write path end to end *before* judging anything, writes the architecture summary (blind spots included) for you to correct, then reports structural, duplication, performance and maintainability findings ranked by **risk × churn**. It changes nothing — it produces the map and the plan, then hands the work out: **`/clean-architecture`**, **`/optimizing-performance`**, or **`/improve-codebase-architecture`**.
 
-- **Nothing exists yet** → **`/system-design`** for one system or service that has to hold up (numbers before boxes: requirements as figures, access patterns driving the schema, API contract, caching where invalidation *is* the design, failure modes — then one vertical slice built for real), or **`/full-stack-mvp`** for a whole application (one core loop, built production-ready, in vertical slices, with auth, migrations and a deploy from commit one). Both are still downstream of alignment — grill the idea first, then design it.
-
 - **A huge, foggy effort — a greenfield project or a huge feature build, too big for one session** → **`/wayfinder`**, the most cognitively demanding flow here. When the way from here to the destination isn't visible yet, it charts a **shared map** of **decision tickets** on the issue tracker and resolves them one at a time — producing **decisions, not deliverables** — until the fog is pushed back and the way is clear. Where **`/grill-with-docs`** sharpens an idea you can hold in one session, wayfinder is for the idea you can't — and it's slower and denser, so save it for exactly that, never a well-scoped feature.
 
   When the map clears, **it hands off, it doesn't build**: merge onto the main flow at **`/to-spec`**, which collapses the map's linked decisions into a buildable plan, then `/to-tickets` and `/implement` as usual. Looping the map straight into `/implement` skips that collapse and throws the linked detail away — go straight to `/implement` only when the effort turned out genuinely small.
+
+## Starting from nothing
+
+Not an on-ramp — these don't merge onto the main flow, they *are* the build. Both are still downstream of alignment: grill the idea first, then design it.
+
+- **`/system-design`** — one backend system or service that has to hold up. Numbers before boxes: requirements as figures, access patterns driving the schema, API contract, caching where invalidation *is* the design, failure modes — then one vertical slice built for real. No frontend.
+- **`/full-stack-mvp`** — a whole application, backend and UI. One core loop built production-ready, in vertical slices, with migrations and a deploy from commit one.
+
+Greenfield work can also start at **`/wayfinder`** (below). The tiebreak: if you can name the core loop in one sentence, build it here; if the way to the destination isn't visible yet, chart it there first.
 
 ## Codebase health
 
@@ -82,6 +89,7 @@ Off the main flow entirely.
 - **`/research`** — delegate reading legwork to a **background agent**: it investigates a question against **primary sources**, then leaves a cited Markdown file in the repo. Keep working while it reads. The file it produces is something to take *into* the main flow at `/grill-with-docs` — research feeds the thinking, it doesn't replace it.
 - **`/ui-components`** — build a UI component that gets reused: props contract before markup, every state designed (empty, loading, error, too much, offline), accessibility as a floor rather than a phase. `/full-stack-mvp` pulls it in for an app's shared pieces.
 - **`/four-hats`** — put one nontrivial change through Architect → Engineer → Reviewer → Optimizer, one hat at a time. The mechanism is **separation**: the Reviewer and Optimizer run as context-isolated sub-agents that never see your reasoning, because a reviewer who watched you write the code agrees with you. Overkill for small changes — reach for `/code-review` alone there.
+- **`/resolving-merge-conflicts`** — an in-progress merge or rebase, worked hunk by hunk, resolving by intent traced to each side's primary source, then finishing the operation — never `--abort`.
 - **`/teach`** — learn a concept over multiple sessions, using the current directory as a stateful workspace.
 - **`/writing-great-skills`** — reference for writing and editing skills well.
 
