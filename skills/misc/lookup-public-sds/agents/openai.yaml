@@ -1,0 +1,3 @@
+interface:
+  display_name: "Lookup Public SDS"
+  short_description: "Fetch public LCSS / MSDS safety data"

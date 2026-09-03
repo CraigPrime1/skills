@@ -2,6 +2,7 @@
 
 Tools I keep around but rarely use, not promoted in the plugin.
 
+- **[lookup-public-sds](./lookup-public-sds/SKILL.md)**: Fetch a publicly listed chemical safety sheet (PubChem LCSS / GHS) by name, CAS, or CID, and point at a manufacturer SDS PDF when one is already posted.
 - **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)**: Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
 - **[migrate-to-shoehorn](./migrate-to-shoehorn/SKILL.md)**: Migrate test files from `as` type assertions to @total-typescript/shoehorn.
 - **[scaffold-exercises](./scaffold-exercises/SKILL.md)**: Create exercise directory structures with sections, problems, solutions, and explainers.
