@@ -1,6 +1,6 @@
 ---
 name: system-design
-description: Design a scalable backend system or service — no frontend — and then build its minimal production version. Use when the user asks to design or build a new system, service, backend or architecture: its data flow, API contract, database schema, caching strategy, queues, sharding, multi-tenancy, or how it will handle scale.
+description: "Design a scalable backend system or service — no frontend — and then build its minimal production version. Use when the user asks to design or build a new system, service, backend or architecture: its data flow, API contract, database schema, caching strategy, queues, sharding, multi-tenancy, or how it will handle scale."
 ---
 
 # System Design

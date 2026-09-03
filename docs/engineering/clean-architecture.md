@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=clean-architecture
-```
-
-```bash
-npx skills update clean-architecture
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/clean-architecture)
-
 ## What it does
 
 `clean-architecture` restructures existing code into separated concerns and real module boundaries — behaviour identical, structure improved — and writes the architecture description that makes the new tree navigable.

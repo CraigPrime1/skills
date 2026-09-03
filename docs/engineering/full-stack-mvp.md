@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=full-stack-mvp
-```
-
-```bash
-npx skills update full-stack-mvp
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/full-stack-mvp)
-
 ## What it does
 
 `full-stack-mvp` builds a whole application from scratch the way a senior full-stack engineer ships a startup's first version: architecture, file structure, database schema, API endpoints, UI architecture, and complete running code.

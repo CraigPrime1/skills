@@ -1,6 +1,6 @@
 ---
 name: optimizing-performance
-description: Make code faster, leaner, or more scalable — measurement first. Use when the user says something is slow, heavy, laggy or takes forever, or mentions performance, memory usage or a memory leak, scalability, bottlenecks, N+1 queries, bundle size, or unnecessary re-renders — for code that has always been too slow, not code that used to be fast (that's a regression: use diagnosing-bugs).
+description: "Make code faster, leaner, or more scalable — measurement first. Use when the user says something is slow, heavy, laggy or takes forever, or mentions performance, memory usage or a memory leak, scalability, bottlenecks, N+1 queries, bundle size, or unnecessary re-renders — for code that has always been too slow, not code that used to be fast (that's a regression: use diagnosing-bugs)."
 ---
 
 # Optimizing Performance

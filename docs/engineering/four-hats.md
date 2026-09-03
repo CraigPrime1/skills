@@ -1,17 +1,4 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=four-hats
-```
-
-```bash
-npx skills update four-hats
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/four-hats)
-
 ## What it does
-
 `four-hats` runs one piece of work through four separated roles — Architect designs it, Engineer builds it, Reviewer tries to break it, Optimizer makes it faster — one hat at a time, each leaving a written artifact for the next.
 
 The value isn't the number of roles, it's the **separation**: the Reviewer and the Optimizer run as fresh sub-agents that see the diff and the brief but never your reasoning for it. A reviewer who watched you write the code agrees with you.

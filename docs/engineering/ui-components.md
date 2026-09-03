@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=ui-components
-```
-
-```bash
-npx skills update ui-components
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/ui-components)
-
 ## What it does
 
 `ui-components` builds the UI component a senior frontend engineer would ship — a reusable, accessible, production-ready one — by deciding its props contract, designing every state it can be in, and clearing an accessibility floor before it's called done.
