@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=optimizing-performance
-```
-
-```bash
-npx skills update optimizing-performance
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/optimizing-performance)
-
 ## What it does
 
 `optimizing-performance` finds the real bottleneck in slow, heavy, or unscalable code, fixes it, and proves the fix with numbers — speed, memory and scale all run through the same loop.

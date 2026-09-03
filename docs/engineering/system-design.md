@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=system-design
-```
-
-```bash
-npx skills update system-design
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/system-design)
-
 ## What it does
 
 `system-design` designs a scalable system — data model, API contract, component structure, data flow, caching, failure modes — and then builds the smallest version of that design that could genuinely run in production.

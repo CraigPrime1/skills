@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=onboarding-audit
-```
-
-```bash
-npx skills update onboarding-audit
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/onboarding-audit)
-
 ## What it does
 
 `onboarding-audit` orients you in a large, unfamiliar codebase — how it's built, run and wired — and then reports its structural problems, duplication, performance bottlenecks and maintainability risks as a ranked list with evidence.

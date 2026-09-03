@@ -1,15 +1,3 @@
-Quickstart:
-
-```bash
-npx skills add mattpocock/skills --skill=production-debugging
-```
-
-```bash
-npx skills update production-debugging
-```
-
-[Source](https://github.com/mattpocock/skills/tree/main/skills/engineering/production-debugging)
-
 ## What it does
 
 `production-debugging` investigates a failure happening to real users in a live environment — working from logs, traces, metrics and the deploy timeline rather than a debugger you can't attach.

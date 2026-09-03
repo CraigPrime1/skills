@@ -1,6 +1,6 @@
 ---
 name: full-stack-mvp
-description: Build a complete, production-ready application from scratch — backend and user interface: architecture, file structure, database schema, API endpoints, UI, and working code. Use when the user wants a new app, product, SaaS or clone built end to end from zero, a greenfield project scaffolded, or a startup MVP that has to be real rather than a demo.
+description: "Build a complete, production-ready application from scratch — backend and user interface: architecture, file structure, database schema, API endpoints, UI, and working code. Use when the user wants a new app, product, SaaS or clone built end to end from zero, a greenfield project scaffolded, or a startup MVP that has to be real rather than a demo."
 ---
 
 # Full-Stack MVP
