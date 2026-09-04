@@ -38,3 +38,4 @@ Model- or user-reachable (rich trigger phrasing so the model can reach for them)
 - **[production-debugging](./production-debugging/SKILL.md)**: Investigate a failure hitting real users: mitigate first, harvest the evidence before it rotates away, instrument production safely, then fix and write the post-incident note.
 - **[onboarding-audit](./onboarding-audit/SKILL.md)**: Get oriented in an unfamiliar codebase by tracing real paths end to end, then report structural, duplication, performance and maintainability findings ranked by risk × churn.
 - **[four-hats](./four-hats/SKILL.md)**: Run one piece of work through Architect → Engineer → Reviewer → Optimizer, with the review and optimisation hats as context-isolated sub-agents.
+- **[agent-safety](./agent-safety/SKILL.md)**: Install cross-harness guardrails that block dangerous agent shell commands (git push/reset/clean, curl|bash) in Cursor Grok, Claude Code, and via AGENTS.md for Codex.

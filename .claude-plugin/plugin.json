@@ -45,6 +45,7 @@
     "./skills/engineering/onboarding-audit",
     "./skills/engineering/four-hats",
     "./skills/engineering/wizard",
+    "./skills/engineering/agent-safety",
     "./skills/productivity/grill-me",
     "./skills/productivity/grilling",
     "./skills/productivity/handoff",

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Agent Safety"
+  short_description: "Guardrails for Cursor Grok, Claude, Codex"
